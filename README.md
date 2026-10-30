@@ -1,47 +1,56 @@
-# 📈 Project 2: Advanced Exploratory Data Analysis (EDA)
-**DecodeLabs Data Analytics Internship | Mathematical Analytics & Statistical Auditing**
+# 💾 Project 3: Relational SQL Database Architecture & Engineering
+**DecodeLabs Data Analytics Internship | Production Database Scripting Track**
 
 ## 🏷️ Project Title
-**E-Commerce Financial Revenue Stream Variance Analysis & Statistical Outlier Identification**
+**Enterprise E-Commerce Transactional Ledger Ingestion & Relational Analytics Scripting**
 
 ## 📝 Detailed Project Overview
-Data distributions within retail streams are frequently volatile and skewed due to transactional anomalies. This project executes an advanced Exploratory Data Analysis (EDA) and rigorous statistical audit across the sanitized dataset of **1,200 unique records** using Microsoft Excel. By building continuous frequency distribution models and implementing parametric boundaries, this pipeline locates systemic skewness and isolates critical revenue vectors driving our macro projections.
+This phase translates our fully-sanitized spreadsheet database into Microsoft SQL Server Management Studio (SSMS) to execute deep data retrieval, criteria-based aggregation, and promotional yield analysis. The relational database pipeline is explicitly configured to ingest exactly **1,200 transactional records** and process analytical metrics mapping safely to relational database engine constraints.
 
 ---
 
-### 📊 Comprehensive Statistical Indicators & Volume Metrics
+### ⚙️ Core Database Engine Computational Constraints
 
-Conducted a deep computational data audit to calculate the true center, variation, and mathematical spread of our global revenue operations:
-* **Operational Mean (Average Transaction Value):** \$1,053.97
-* **Central Median (True Distribution Center):** \$823.62
-* **Standard Deviation (Data Variation/Spread):** \$819.86
-* **Minimum Order Value:** \$11.39 | **Maximum Order Value:** \$3,456.40
-* **Computational Insights:** The substantial variance gap where the calculated Mean (\$1,053.97) is pulled significantly higher than the central Median (\$823.62) mathematically validates a **heavy right-skewed revenue distribution model**. The metric skewness is heavily driven by a distinct high-value transaction layer pulling the average upward.
+Every analytical extraction scripted within this pipeline respects the hardcoded mathematical processing order of relational database query optimizers:
+👉 `FROM ➡️ WHERE ➡️ GROUP BY ➡️ HAVING ➡️ SELECT ➡️ ORDER BY`
 
 ---
 
-### 🚨 Tukey's Interquartile Range (IQR) Outlier Isolation Framework
+### 🛠️ Technical Query Implementations & Structural Logic
 
-Rather than relying on generic percentage assumptions, this framework deploys strict parametric mathematical constraints to isolate transactional anomalies:
-1. **Quartile Boundaries:** Locked the Lower Quartile (Q1) at **\$410.52** and the Upper Quartile (Q3) at **\$1,578.48**.
-2. **Interquartile Range Calculation:** Evaluated the data spread to set the IQR factor at **\$1,167.96**.
-3. **Threshold Boundary Limit:** Multiplied the IQR factor by the standard 1.5 threshold limit to establish a strict upper-bound baseline ceiling threshold at exactly **\$3,330.41**.
-4. **Forensic VIP Discovery:** Every transaction breaching the \$3,330.41 boundary limit was flagged. The analytics engine captured exactly **8 absolute high-value positive outlier transactions** driving massive macro velocity.
+#### Task 01 | Multi-Criteria Transactional Filtering
+* **Objective:** Isolate high-priority running orders based on explicit operational states.
+* **SQL Logic:** Applied precise boolean conjunctions (`WHERE OrderStatus = 'Shipped' AND PaymentMethod = 'Credit Card'`) to screen active financial loops and remove pending or cancelled traffic distortions.
+
+#### Task 02 | Categorical Aggregations & Volume Compression
+* **Objective:** Compress 1,200 raw data rows into clean category-level financial metrics.
+* **SQL Logic:** Deployed `GROUP BY Product` alongside mathematical functions (`COUNT(OrderID)`, `SUM(Quantity)`, and `ROUND(SUM(TotalPrice), 2)`). This ensures exact metric rounding to avoid float data errors.
+
+#### Task 03 | Tukey's IQR Validation Ingestion
+* **Objective:** Inject Project 2's statistical upper-bound limit into the active SQL query stream.
+* **SQL Logic:** Hardcoded the numerical threshold baseline (`WHERE TotalPrice > 3330.41`) inside the row-filtering pipeline to isolate exactly the **8 absolute VIP corporate transactions** pulling macro revenue parameters.
+
+#### Task 04 | Marketing Promotional Yield Analysis (`HAVING` Controls)
+* **Objective:** Filter grouped marketing coupon yields to identify high-yield promotional strategies.
+* **SQL Logic:** Combined string exclusions (`CouponCode IS NOT NULL AND CouponCode <> 'NO_COUPON'`) with a trailing evaluation barrier (`HAVING SUM(TotalPrice) > 20000.00`). Sorted results using `ORDER BY Campaign_Gross_Yield DESC` to isolate top performers like `FREESHIP` and `SAVE10`.
+
+#### Task 05 | Traffic Channel Acquisition Matrix
+* **Objective:** Rank client acquisition channels based on their direct gross revenue contribution.
+* **SQL Logic:** Structured aggregation blocks on `ReferralSource` variables, removing empty anomalies (`WHERE ReferralSource IS NOT NULL AND ReferralSource <> ''`) to rank channel values from highest to lowest velocity.
 
 ---
 
-### 🖼️ Operational Excel Analytical Visualizations
-Below is the verified spreadsheet snapshot displaying our distribution histogram models, continuous monthly timeline trends, and the statistical outlier fingerprinting chart [image_DUGNuC.png]:
+### 🖼️ SSMS Production Grid Proofs
 
-![Excel Statistical Dashboard](Exploratory%20Data%20Analysis.png)
+#### 1. Outlier Validation (Task 03 - 8 VIP Rows Captured):
+![SSMS Outlier Results](Task%203%20-%20Outlier%20Forensic%20Audit.png)
+
+#### 2. Referral Traffic Acquisitions (Task 05 Grid Output):
+![SSMS Channel Results](Task%205%20-%20Referral%20Source%20Performance.png)
 
 ---
 
-### 📈 Strategic Corporate Takeaways & Metrics Verification
-* **B2B Isolation Loop:** The 8 isolated positive outliers represent bulk enterprise B2B transactions rather than retail logging errors. Recommend separating these records into a dedicated high-margin tracking account stream.
-* **Quantity vs Price Dynamics:** A positive correlation index of **0.62** confirms high operational dependency on large-volume purchasing runs across our client cycles.
-* **Macro Revenue Financial Channels:** Verified a total sales accumulation of **\$263,847.63 coming strictly from Credit Card streams**.
-
-## ⚙️ How to Run & Replicate This Project
-1. Download the operational spreadsheet asset: **`Dataset for Data Analytics(EDA).xlsx`**.
-2. Open the file inside Microsoft Excel to inspect the formulas embedded within the Advanced Statistics calculations worksheet.
+## ⚙️ How to Run & Execute This Project
+1. Ingest the raw data schema into your local Microsoft SQL Server instance (`SSMS`).
+2. Run the master script file: **`Decode Labs(Ecomerce Data).sql`** inside the database workspace.
+3. Execute queries sequentially to review output grids mapping to our 5 core operational targets.
